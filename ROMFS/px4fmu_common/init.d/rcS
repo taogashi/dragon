@@ -109,6 +109,12 @@ then
 	set PWM_DISARMED none
 	set PWM_MIN none
 	set PWM_MAX none
+        # dragon's pwm out for motor
+        set DRAGON_MOTOR_OUT none
+        set DRAGON_MOTOR_RATE none
+        set DRAGON_MOTOR_DISARMED none
+        set DRAGON_MOTOR_MIN none
+        set DRAGON_MOTOR_MAX none
 	set MK_MODE none
 	set FMU_MODE pwm
 	set MAVLINK_F default
@@ -418,7 +424,7 @@ then
 			set EXIT_ON_END yes
 		else
 			# Start MAVLink on default port: ttyS1
-			set MAVLINK_F "-r 1000"
+			set MAVLINK_F "-r 1000 -d /dev/ttyS1"
 		fi
 	fi
 
@@ -521,6 +527,10 @@ then
 				set MAV_TYPE 2
 			fi
 			if [ $MIXER == tri_y_yaw- -o $MIXER == tri_y_yaw+ ]
+			then
+				set MAV_TYPE 2
+			fi
+			if [ $MIXER == dragon ]
 			then
 				set MAV_TYPE 2
 			fi

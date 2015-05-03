@@ -801,6 +801,33 @@ MulticopterAttitudeControl::task_main()
 				_actuators.control[1] = (isfinite(_att_control(1))) ? _att_control(1) : 0.0f;
 				_actuators.control[2] = (isfinite(_att_control(2))) ? _att_control(2) : 0.0f;
 				_actuators.control[3] = (isfinite(_thrust_sp)) ? _thrust_sp : 0.0f;
+
+				if (_actuators.control[0] > (float)1.0) {
+					_actuators.control[0] = 1.0;
+				}
+				else if (_actuators.control[0] < (float)-1.0) {
+					_actuators.control[0] = -1.0;
+				}
+
+				if (_actuators.control[1] > (float)1.0) {
+					_actuators.control[1] = 1.0;
+				}
+				else if (_actuators.control[1] < (float)-1.0) {
+					_actuators.control[1] = -1.0;
+				}
+
+				if (_actuators.control[2] > (float)1.0) {
+					_actuators.control[2] = 1.0;
+				}
+				else if (_actuators.control[2] < (float)-1.0) {
+					_actuators.control[2] = -1.0;
+				}
+				/* YS test point */
+//				_actuators.control[0] = 0.0;
+//				_actuators.control[1] = 0.0;
+//				_actuators.control[2] = 3.4;
+//				_actuators.control[3] = 0.5;
+
 				_actuators.timestamp = hrt_absolute_time();
 				_actuators.timestamp_sample = _v_att.timestamp;
 

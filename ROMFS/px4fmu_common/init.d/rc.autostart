@@ -153,6 +153,12 @@ then
 	sh /etc/init.d/4012_quad_x_can
 fi
 
+if param compare SYS_AUTOSTART 4013 13
+then
+        echo "hit"
+	sh /etc/init.d/4013_dragon
+fi
+
 if param compare SYS_AUTOSTART 4020
 then
 	sh /etc/init.d/4020_hk_micro_pcb

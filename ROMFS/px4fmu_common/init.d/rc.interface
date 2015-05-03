@@ -89,6 +89,36 @@ then
 		fi
 	fi
 
+        if [ $DRAGON_MOTOR_OUT != none ]
+        then
+                pwm disarmed -c 1 -p 1570
+                pwm disarmed -c 2 -p 1470
+                pwm disarmed -c 3 -p 1500
+                pwm disarmed -c 4 -p 1550
+                pwm failsafe -c 1 -p 1570
+                pwm failsafe -c 2 -p 1470
+                pwm failsafe -c 3 -p 1500
+                pwm failsafe -c 4 -p 1550
+
+                if [ $DRAGON_MOTOR_RATE != none ]
+                then
+                        pwm rate -c $DRAGON_MOTOR_OUT -r $DRAGON_MOTOR_RATE
+                fi
+
+                if [ $DRAGON_MOTOR_DISARMED != none ]
+                then
+                        pwm disarmed -c $DRAGON_MOTOR_OUT -p $DRAGON_MOTOR_DISARMED
+                fi
+                if [ $DRAGON_MOTOR_MIN != none ]
+                then
+                        pwm min -c $DRAGON_MOTOR_OUT -p $DRAGON_MOTOR_MIN
+                fi
+                if [ $DRAGON_MOTOR_MAX != none ]
+                then
+                        pwm max -c $DRAGON_MOTOR_OUT -p $DRAGON_MOTOR_MAX
+                fi
+        fi
+
 	if [ $FAILSAFE != none ]
 	then
 		pwm failsafe -d $OUTPUT_DEV $FAILSAFE
