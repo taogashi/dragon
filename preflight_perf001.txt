@@ -1,0 +1,53 @@
+PERFORMANCE COUNTERS PRE-FLIGHT
+
+sd write: 0 events, 0 overruns, 0us elapsed, 0us avg, min 0us max 0us 0.000us rms
+navigator: 6018 events, 0 overruns, 91849us elapsed, 15us avg, min 11us max 10643us 137.466us rms
+mc_att_control: 27473 events, 0 overruns, 1472070us elapsed, 53us avg, min 12us max 190us 18.013us rms
+attitude_estimator_ekf: 27475 events, 0 overruns, 15077759us elapsed, 548us avg, min 429us max 859us 70.514us rms
+sensor task update: 27577 events, 0 overruns, 1983373us elapsed, 71us avg, min 44us max 434us 23.939us rms
+px4flow_buffer_overflows: 0 events
+px4flow_comms_errors: 0 events
+px4flow_read: 0 events, 0 overruns, 0us elapsed, 0us avg, min 0us max 0us 0.000us rms
+px4flow_buffer_overflows: 0 events
+px4flow_comms_errors: 0 events
+px4flow_read: 0 events, 0 overruns, 0us elapsed, 0us avg, min 0us max 0us 0.000us rms
+lsm303d_bad_values: 0 events
+lsm303d_bad_registers: 0 events
+lsm303d_accel_resched: 117 events
+lsm303d_mag_read: 11058 events, 0 overruns, 221354us elapsed, 20us avg, min 20us max 21us 0.131us rms
+lsm303d_accel_read: 88569 events, 0 overruns, 2580630us elapsed, 29us avg, min 8us max 30us 0.821us rms
+l3gd20_bad_registers: 0 events
+l3gd20_errors: 0 events
+l3gd20_reschedules: 446 events
+l3gd20_read: 84502 events, 0 overruns, 2604298us elapsed, 30us avg, min 8us max 31us 1.610us rms
+mpu6000_reset_retries: 0 events
+mpu6000_good_transfers: 110586 events
+mpu6000_bad_registers: 0 events
+mpu6000_bad_transfers: 0 events
+mpu6000_read: 110588 events, 0 overruns, 5305558us elapsed, 47us avg, min 43us max 50us 0.284us rms
+mpu6000_gyro_read: 0 events
+mpu6000_accel_read: 2 events
+ctrl_latency: 27468 events, 9 overruns, 12171259us elapsed, 443us avg, min 11us max 999us 262.551us rms
+sys_latency: 0 events, 0 overruns, 0us elapsed, 0us avg, min 0us max 0us 0.000us rms
+mpu6000_reset_retries: 0 events
+adc_samples: 110540 events, 0 overruns, 296905us elapsed, 2us avg, min 2us max 3us 0.464us rms
+ms5611_buffer_overflows: 7479 events
+ms5611_comms_errors: 0 events
+ms5611_measure: 9978 events, 0 overruns, 98559us elapsed, 9us avg, min 6us max 1135us 44.493us rms
+ms5611_read: 9977 events, 0 overruns, 983158us elapsed, 98us avg, min 10us max 1349us 157.120us rms
+mavlink_txe: 14 events
+mavlink_el: 9854 events, 0 overruns, 2014622us elapsed, 204us avg, min 30us max 1281067us 12908.650us rms
+io latency: 27481 events, 0 overruns, 38221833us elapsed, 1390us avg, min 691us max 2625us 267.010us rms
+io write: 0 events, 0 overruns, 0us elapsed, 0us avg, min 0us max 0us 0.000us rms
+io update: 27506 events, 0 overruns, 15229046us elapsed, 553us avg, min 260us max 5229us 529.590us rms
+io_badidle  : 0 events
+io_idle     : 46336 events
+io_uarterrs : 0 events
+io_protoerrs: 0 events
+io_dmaerrs  : 0 events
+io_crcerrs  : 0 events
+io_timeouts : 0 events
+io_retries  : 0 events
+io_dmasetup : 46338 events, 0 overruns, 258079us elapsed, 5us avg, min 3us max 146us 5.676us rms
+io_txns     : 46338 events, 0 overruns, 14325722us elapsed, 309us avg, min 134us max 4336us 112.767us rms
+DMA allocations: 8 events
